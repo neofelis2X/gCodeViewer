@@ -3,7 +3,7 @@ html {
     margin:0;
     padding:0;
     color:#000;
-    background-image: url(cupertino/images/background.jpg);
+    background-image: url(background.jpg);
 }
 #wrap {
     width:1000px;

@@ -292,7 +292,7 @@ GCODE.ui = (function(){
         });
 
         //this stops slider reacting to arrow keys, since we do it below manually
-        $( "#slider-vertical").find(".ui-slider-handle" ).unbind('keydown');
+        $( "#slider-vertical").find(".ui-slider-handle" ).off('keydown');
 
         sliderHor.slider({
             orientation: "horizontal",
@@ -417,14 +417,14 @@ GCODE.ui = (function(){
 
             $(".collapse").collapse({parent: '#accordion2'});
 
-            $('#myTab').find('a[href="#tab3d"]').click(function (e) {
+            $('#myTab').find('a[href="#tab3d"]').on("click", function (e) {
                 e.preventDefault();
                 console.log("Switching to 3d mode");
                 $(this).tab('show');
                 GCODE.renderer3d.doRender();
             });
 
-            $('#myTab').find('a[href="#tabGCode"]').click(function (e) {
+            $('#myTab').find('a[href="#tabGCode"]').on("click", function (e) {
                 e.preventDefault();
                 console.log("Switching to GCode preview mode");
                 $(this).tab('show');
